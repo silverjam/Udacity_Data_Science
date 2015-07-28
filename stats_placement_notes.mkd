@@ -1,0 +1,83 @@
+# Statical Placement Notes
+
+Stat param:
+- https://en.wikipedia.org/wiki/Statistical_parameter
+
+Population vs Sample Mean:
+- https://statpac.com/manual/index.htm?turl=compareasamplemeantoapopulationmean.htm
+
+Sample mean:
+- http://mathworld.wolfram.com/SampleMean.html
+
+----
+
+Statistical absolute relative frequency:
+- http://www.abs.gov.au/websitedbs/a3121120.nsf/home/statistical+language+-+describing+frequencies
+
+- [Frequency (statistics) \[Wikipedia\]]( https://en.wikipedia.org/wiki/Frequency_%28statistics%29)
+
+For the hair color example, proportion and percentage are both relative frequencies because they are relative to the total number of things counted.  Hair color count is not relative to anything (therefore absolute).
+
+----
+
+Statistical variance: how the data values "spread" -- a somewhat arbitrarily
+defined characterization defined as follows:
+
+``` python
+from __future__ import division
+
+def average(data):
+    return sum(data)/len(data)
+
+def population_variance(data):
+    avg = average(data)
+    return sum((avg - x)**2 for x in data) / len(data)
+```
+
+Also see: https://en.wikipedia.org/wiki/Variance#Sample_variance
+
+Reasons for squaring the term inside the sum:
+  - Makes the value positive
+  - Emphasizes larger differences
+  - [From: http://stats.stackexchange.com/a/151/83344]
+
+``` python
+from __future__ import division
+
+def sample_variance(data):
+    avg = average(data)
+    return sum((avg - x)**2 for x in data) / (len(data)-1)
+```
+
+The sample variance divides by `len(data)-1` because it's correcting for a bias
+according to a derivation on Wikipedia:
+  - https://en.wikipedia.org/wiki/Variance#Sample_variance
+
+This is because the sample variance is a "random selection" from the
+global population, so it's an estimate of the actual variance.  Without
+correcting for the bias, the sample va riance is a biased estimate.
+
+---
+
+Standard deviation: [Wikipedia](https://en.wikipedia.org/wiki/68–95–99.7_rule)
+
+Standard deviation is the square root of the variance.
+
+<img src="./68_95_99.png" />
+
+----
+
+Sample vs population variance/std_deviation:
+- https://www.udacity.com/course/viewer#!/c-ud134-nd/l-4612348621/e-83417916/m-83664043
+
+In EXCEL / Google Sheets:
+  - VAR(): variance of a sample
+  - VARP(): variance of a population
+  - STDDEV(): standard deviation of a sample
+  - STDDEVP(): standard deviation of a population
+
+Troubles with excel functions:
+  - https://discussions.udacity.com/t/statistic-placement-advisor-l4-variance-and-std/26875
+
+Discussion forum for project 1:
+  - https://discussions.udacity.com/c/nd002-2015-07-08/p1-investigate-a-classic-psychological-effect

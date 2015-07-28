@@ -1,0 +1,8 @@
+
+Useful links:
+  - http://pandas-docs.github.io/pandas-docs-travis/cookbook.html#cookbook
+  - http://pandas-docs.github.io/pandas-docs-travis/10min.html
+
+Ebooks:
+- https://it-ebooks.info/book/5969/
+- https://it-ebooks.info/book/1041/

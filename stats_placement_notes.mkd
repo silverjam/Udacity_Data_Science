@@ -82,6 +82,18 @@ Troubles with excel functions:
 Discussion forum for project 1:
   - https://discussions.udacity.com/c/nd002-2015-07-08/p1-investigate-a-classic-psychological-effect
 
-----
+---
 
-<img src="mean_of_sample_means.png" />
+<img src="mean_of_sample_means.png" width="500" />
+
+---
+
+Central limit theorem
+
+The mean of sample means (of size N) for any population is going to be mostly normal (for certain size of N).
+
+<img src="central_limit_theorem.png" />
+
+\[ \sigma_m = { \sigma \over \sqrt N }  \]
+
+- http://stattrek.com/statistics/dictionary.aspx?definition=Central_limit_theorem

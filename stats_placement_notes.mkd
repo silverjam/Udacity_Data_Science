@@ -94,6 +94,14 @@ The mean of sample means (of size N) for any population is going to be mostly no
 
 <img src="central_limit_theorem.png" />
 
+---
+
+Central limit thing:
+
 \[ \sigma_m = { \sigma \over \sqrt N }  \]
 
+---
+
 - http://stattrek.com/statistics/dictionary.aspx?definition=Central_limit_theorem
+
+<img src="std_dev_of_sample.png" />
